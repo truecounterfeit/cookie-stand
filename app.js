@@ -55,14 +55,18 @@ alki.makeRow();
 
 var formEl = document.getElementById('form')
 
-formEl.addEventListener('Submit', handleSubmit);
+formEl.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){
   event.preventDefault();
   console.log(event.target.storeName.value);
 
   var storeName = event.target.storeName.value;
-  var minCustomer = event.target.minCustomer.value;
-  var maxCustomer = event.target.minCustomer.value;
-  var avgCookie = event.target.minCustomer.value;
+  var minCust = event.target.minCust.value;
+  var maxCust = event.target.maxCust.value;
+  var avgCookie = event.target.avgCookie.value;
+
+  var newStore = new Store(storeName, minCust, maxCust, avgCookie);
+  newStore.avgCookieHour();
+  newStore.makeRow();
 }

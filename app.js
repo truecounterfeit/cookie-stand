@@ -52,3 +52,21 @@ capitalHill.makeRow();
 var alki = new Store('Alki', 2, 16, 4.6);
 alki.avgCookieHour();
 alki.makeRow();
+
+var formEl = document.getElementById('form')
+
+formEl.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event){
+  event.preventDefault();
+  console.log(event.target.storeName.value);
+
+  var storeName = event.target.storeName.value;
+  var minCust = event.target.minCust.value;
+  var maxCust = event.target.maxCust.value;
+  var avgCookie = event.target.avgCookie.value;
+
+  var newStore = new Store(storeName, minCust, maxCust, avgCookie);
+  newStore.avgCookieHour();
+  newStore.makeRow();
+}

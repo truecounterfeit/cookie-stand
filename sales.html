@@ -14,6 +14,26 @@ table to show the total amount of projected cookie needs at each location, with 
 <image src = "file:///Users/macbook/Desktop/salmon.png" width = "300" height = "100%" alt = "Salmon">
 </a>
 <h1>Pat's Salmon Cookies</h1>
+  <form id="form">
+    <fieldset>
+      <legend>New store:</legend>
+      <div>
+        <label for="storeName">New Store Name:</label>
+        <input id="store-name-input" type="text" name="storeName" placeholder="Store" required>
+      </div>
+        <label for="minCust">Min Customer:</label>
+        <input type="number" name="minCust" value="" required>
+      <div>
+        <label for="maxCust">Max Customer:</label>
+        <input type="number" name="maxCust" value="" required>
+      </div>
+      <div>
+        <label for="avgCookie">Avg Cookies:</label>
+        <input type="number" name="avgCookie" value="" required>
+      </div>
+      <input type="submit" value="Add New Store"
+    </fieldset>
+  </form>
   <table id = "generate-table" width = "400", cellpadding = "10", cellspacing = "5", border = "2" >
     <thead>
       <tr>

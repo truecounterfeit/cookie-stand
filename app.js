@@ -21,13 +21,22 @@ function Store (name, minCust, maxCust, avgCookie) {
   this.makeRow = function(){
 
     var newRowEl = document.createElement('tr');
+    var total = 0;
 
     for (var i = 0; i < 16; i++) {
       var storeDataEl = document.createElement('td');
       storeDataEl.textContent = this.arrayCookieHour[i];
       newRowEl.appendChild(storeDataEl);
+      if ( i > 1) {
+        total = total + this.arrayCookieHour[i];
+      }
     }
+    var storeTotalEl = document.createElement('td');
+    storeTotalEl.textContent = total;
+
+    newRowEl.appendChild(storeTotalEl);
     tableEl.appendChild(newRowEl);
+
   };
 }
 
@@ -45,7 +54,7 @@ var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
 seattleCenter.avgCookieHour();
 seattleCenter.makeRow();
 
-var capitalHill = new Store('Capital Hill', 20, 38, 2.3);
+var capitalHill = new Store('Capitol Hill', 20, 38, 2.3);
 capitalHill.avgCookieHour();
 capitalHill.makeRow();
 
@@ -53,7 +62,7 @@ var alki = new Store('Alki', 2, 16, 4.6);
 alki.avgCookieHour();
 alki.makeRow();
 
-var formEl = document.getElementById('form')
+var formEl = document.getElementById('form');
 
 formEl.addEventListener('submit', handleSubmit);
 

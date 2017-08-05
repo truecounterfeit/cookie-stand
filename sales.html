@@ -4,22 +4,22 @@
 <head>
   <title>Pat's Salmon Cookies</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
-
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
 </head>
 <body>
-<!--building an application that calculates daily sales projections for each location
-
-table to show the total amount of projected cookie needs at each location, with the table displaying the cookie stand location, the total number of cookies needed for each location, an hourly breakdown of total cookies sales for each location-->
+<div class = "center">
 <a href ="index.html">
 <image src = "file:///Users/macbook/Desktop/salmon.png" width = "300" height = "100%" alt = "Salmon">
 </a>
-<h1>Pat's Salmon Cookies</h1>
-  <form id="form">
+<div id = "title">Pat's Salmon Cookies</div>
+</div>
+<div class = "middle">
+  <form id="form" width = "400" height = "100%">
     <fieldset>
       <legend>New store:</legend>
       <div>
         <label for="storeName">New Store Name:</label>
-        <input id="store-name-input" type="text" name="storeName" placeholder="Store" required>
+        <input id="store-name-input" type="text" name="storeName" placeholder="Store" float="right" required>
       </div>
         <label for="minCust">Min Customer:</label>
         <input type="number" name="minCust" value="" required>
@@ -31,10 +31,11 @@ table to show the total amount of projected cookie needs at each location, with 
         <label for="avgCookie">Avg Cookies:</label>
         <input type="number" name="avgCookie" value="" required>
       </div>
-      <input type="submit" value="Add New Store"
+    </br>
+      <input type="submit" value="Add New Store">
     </fieldset>
   </form>
-  <table id = "generate-table" width = "400", cellpadding = "10", cellspacing = "5", border = "2" >
+  <table id = "generate-table", cellpadding = "5", cellspacing = "5", border = "2" >
     <thead>
       <tr>
         <th scope = "col"> </th>
@@ -53,6 +54,7 @@ table to show the total amount of projected cookie needs at each location, with 
         <th scope = "col">6:00pm</th>
         <th scope = "col">7:00pm</th>
         <th scope = "col">8:00pm</th>
+        <th scope = "col">Total</th>
       </tr>
        <!--<tr>
         <th scope = "row"></th>
@@ -73,6 +75,9 @@ table to show the total amount of projected cookie needs at each location, with 
   </table>
 
 <script src="app.js"> </script>
-
+</div>
+<div class = "footer">
+  <p> 	&copy; Pat's Salmon Cookies </p>
+</div>
 </body>
 </html>
